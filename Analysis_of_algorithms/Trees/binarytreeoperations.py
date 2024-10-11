@@ -100,7 +100,7 @@ class Tree:  # This class contains all the methods for tree operations
         return self.TreeInfo(currentDiameter, currentHeight)
     
     
-    def ismatch(self, root: Optional[TreeNode],subroot:Optional[TreeNode]) -> bool:
+    '''def ismatch(self, root: Optional[TreeNode],subroot:Optional[TreeNode]) -> bool:
         if not(root and subroot): return True
         if not(root or subroot): return False
         return self.ismatch(root.right,subroot.right) and self.ismatch(root.left,subroot.right)
@@ -111,7 +111,7 @@ class Tree:  # This class contains all the methods for tree operations
         if root.data == subroot.data:
             if self.ismatch(root,subroot):
                 return True
-        return self.issubtree(root.left,subroot) or self.issubtree(root.right,subroot)
+        return self.issubtree(root.left,subroot) or self.issubtree(root.right,subroot)'''
 
 
 # Move the main function outside the Tree class
@@ -119,7 +119,8 @@ def main():
     nodes = [1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1]
     tree = Tree()
     root = tree.buildTree(nodes)
-    root2=tree.buildTree([1,2,3])
+   # subtree=Tree()
+   # root2=subtree.buildTree([1,2,3])
     print("Preorder Traversal: ", end="")
     tree.preordertraversal(root)
     print("\nInorder Traversal: ", end="")
